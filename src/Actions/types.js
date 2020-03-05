@@ -1,0 +1,3 @@
+export const GET_COLOR = 'GET_COLOR'
+export const SIZE_DECREASE = 'SIZE_DECREASE'
+export const SIZE_INCREASE = 'SIZE_INCREASE'
