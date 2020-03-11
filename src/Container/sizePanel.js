@@ -7,8 +7,8 @@ import {increaseSize} from '../Actions/size-action'
  class SizePanel extends Component {
      GetText = (e) => {
         (e.target.textContent === "Tang") ? this.props.increaseSize() : this.props.decreaseSize();
+
         if( this.props.size.defaultSize === this.props.size.minSize){    
-             
           document.getElementById('b-decrease').classList.add('disabled') 
         }else{
           document.getElementById('b-decrease').classList.remove('disabled') 
@@ -21,7 +21,7 @@ import {increaseSize} from '../Actions/size-action'
           document.getElementById('b-increase').classList.remove('disabled') 
         }
      }
-   
+    
     render() {
         console.log(  this.props.size.defaultSize)
         return (

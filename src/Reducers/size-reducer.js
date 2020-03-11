@@ -10,13 +10,18 @@ export default (state = initialState, { type, payload }) => {
     switch (type) {
 
     case types.SIZE_INCREASE:
-        if ( state.defaultSize < state.maxSize  )
-        return { ...state, defaultSize : state.defaultSize+2 }
+        if ( state.defaultSize < state.maxSize  ){
+            state.defaultSize = state.defaultSize+2;
+            return { ...state }
+       }
         else return state
        
     case types.SIZE_DECREASE:
-        if ( state.defaultSize > state.minSize )
-        return { ...state, defaultSize : state.defaultSize-2 }
+        if ( state.defaultSize > state.minSize ){
+            state.defaultSize = state.defaultSize-2;
+            return { ...state }
+        }
+       
         else return state
      
     default:
